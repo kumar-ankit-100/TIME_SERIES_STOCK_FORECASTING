@@ -39,18 +39,29 @@ An interactive and fully-automated stock market forecasting dashboard built with
 graphql
 Copy
 Edit
+
 TIME_SERIES_STOCK_FORECASTING/
 │
 ├── app.py                     # Main Streamlit application
+|
 ├── data/                      # Folder containing stock CSVs
+|
 ├── models/                    # Trained models saved here
+|
 ├── screenshots/               # Screenshots for documentation
+|
 ├── traditional_models.py      # ARIMA, SARIMA, Prophet functions
+|
 ├── lstm_model.py              # Deep Learning LSTM logic
-├── eda_outliers.py            # EDA and outlier detection functions
+|
+├── eda_outliers.py            # EDA and outlier detection functions|
+|
 ├── comparison.py              # Model comparison and evaluation
+|
 ├── utils.py                   # Utility functions (scaling, metrics)
+|
 ├── requirements.txt           # Required Python packages
+|
 └── README.md                  # This documentation
 
 🧠 Models Explained
