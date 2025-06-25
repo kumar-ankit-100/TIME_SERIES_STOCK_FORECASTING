@@ -4,7 +4,7 @@ An interactive and fully-automated stock market forecasting dashboard built with
 🔗 Live App: Click to Try Now
 💻 Repository: TIME_SERIES_STOCK_FORECASTING
 
-🚀 Features
+🚀 Features:
 ✅ Upload or auto-load multiple stock datasets
 📊 EDA with trend visualization, rolling averages & outlier detection
 🧹 Preprocessing: missing values, scaling, formatting
@@ -97,7 +97,9 @@ streamlit run app.py
 Want to improve or extend the project? Contributions are welcome!
 
 SCREENSHOTS:
+
 <img width="748" alt="Screenshot 2025-06-25 175124" src="https://github.com/user-attachments/assets/6667e99c-bbd8-4b39-86c2-546fc6722579" />
+
 <img width="674" alt="Screenshot 2025-06-25 175318" src="https://github.com/user-attachments/assets/07ae4f5b-f732-4503-b66d-aabf28e64296" />
 
 
