@@ -26,7 +26,6 @@ An interactive and fully-automated stock market forecasting dashboard built with
 
 📊 Real-time interactive plots with Plotly
 
-
 🧭 Dashboard Overview:
 
 🔍 EDA & Outlier Detection
@@ -132,8 +131,14 @@ Push to the branch: git push origin my-feature
 Create a new Pull Request
 
 👨‍💻 Author
+
 Kumar Ankit
-🔗 GitHub Profile
+
+Collaborators:
+Jahnavi Battula
+DS Kamali
+Tanuja
+Lakshya Chaudary
 
 
 📄 License
