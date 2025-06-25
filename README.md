@@ -5,21 +5,29 @@ An interactive and fully-automated stock market forecasting dashboard built with
 💻 Repository: TIME_SERIES_STOCK_FORECASTING
 
 🚀 Features:
+
 ✅ Upload or auto-load multiple stock datasets
+
 📊 EDA with trend visualization, rolling averages & outlier detection
+
 🧹 Preprocessing: missing values, scaling, formatting
+
 📈 Forecasting with 4 models: ARIMA, SARIMA, Prophet, LSTM
+
 🎛️ Full hyperparameter tuning (manual or automated)
+
 📉 Model performance comparison using RMSE, MAE, MAPE
+
 💾 Save trained models for reuse
+
 🧠 LSTM deep learning with time-sequenced input
+
 📁 Folder-based dataset automation
+
 📊 Real-time interactive plots with Plotly
 
-🖼️ Screenshots (📸)
-Place your screenshots inside the screenshots/ folder and they will render here once uploaded.
 
-🧭 Dashboard Overview
+🧭 Dashboard Overview:
 
 🔍 EDA & Outlier Detection
 
@@ -44,7 +52,9 @@ TIME_SERIES_STOCK_FORECASTING/
 ├── utils.py                   # Utility functions (scaling, metrics)
 ├── requirements.txt           # Required Python packages
 └── README.md                  # This documentation
+
 🧠 Models Explained
+
 Model	Type	Framework	Description
 ARIMA	Traditional	statsmodels	Works on lag, trend, and moving average
 SARIMA	Traditional	statsmodels	Extends ARIMA with seasonal factors
@@ -72,12 +82,8 @@ Copy
 Edit
 pip install -r requirements.txt
 3. Add CSV Data
-Place all your stock data (.csv files) in the /data folder.
-Each file should include at minimum:
-
-Date column (format: YYYY-MM-DD)
-
-Close column (closing price)
+   Dataset:
+   https://www.kaggle.com/datasets/szrlee/stock-time-series-20050101-to-20171231?utm_source=chatgpt.com
 
 4. Run the Streamlit App
 bash
