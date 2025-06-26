@@ -1,104 +1,167 @@
+📈 TIME SERIES STOCK FORECASTING
+An interactive and fully-automated stock market forecasting dashboard built with Streamlit, supporting both classical time series models (ARIMA, SARIMA, Prophet) and deep learning (LSTM). The app processes multiple stock datasets, performs exploratory data analysis (EDA), outlier detection, builds models, tunes hyperparameters, and compares model performance using real-time visualizations.
 
+🔗 Live App: Click to Try Now
+💻 Repository: TIME_SERIES_STOCK_FORECASTING
 
-# 📈 Time Series Stock Forecasting
+🚀 Features:
 
-This project focuses on forecasting stock prices using time series analysis and deep learning techniques. It leverages LSTM (Long Short-Term Memory) neural networks to predict future stock prices based on historical data.
+✅ Upload or auto-load multiple stock datasets
 
----
+📊 EDA with trend visualization, rolling averages & outlier detection
 
-## 🧠 Project Objective
+🧹 Preprocessing: missing values, scaling, formatting
 
-The goal is to build a robust model that learns temporal patterns in stock market data and can provide reliable future predictions. The project is suitable for learning about time series preprocessing, LSTM modeling, and result visualization.
+📈 Forecasting with 4 models: ARIMA, SARIMA, Prophet, LSTM
 
----
+🎛️ Full hyperparameter tuning (manual or automated)
 
-## 🚀 Features
+📉 Model performance comparison using RMSE, MAE, MAPE
 
-- 📊 Fetches and processes historical stock data
-- 📈 Visualizes stock trends
-- 🤖 Builds and trains an LSTM-based neural network
-- 🔮 Predicts future stock prices
-- 📉 Compares predictions vs actual values
+💾 Save trained models for reuse
 
----
+🧠 LSTM deep learning with time-sequenced input
 
-## 🛠️ Tech Stack
+📁 Folder-based dataset automation
 
-- Python
-- Pandas & NumPy
-- Matplotlib & Seaborn
-- TensorFlow / Keras
-- Scikit-learn
-- Yahoo Finance API (via `yfinance`)
+📊 Real-time interactive plots with Plotly
 
----
+🧭 Dashboard Overview:
 
-## 📂 Project Structure
+🔍 EDA & Outlier Detection
 
-```bash
+🤖 LSTM Forecast Example
+
+📊 Model Comparison Metrics
+
+📁 Project Folder Structure
+graphql
+Copy
+Edit
+
 TIME_SERIES_STOCK_FORECASTING/
 │
-├── data/                   # Contains CSV or downloaded stock data
-├── models/                 # Saved model files (if any)
-├── plots/                  # Output graphs and prediction plots
-├── stock_forecasting.ipynb # Main Jupyter notebook
-└── README.md               # Project documentation
+├── app.py                     # Main Streamlit application
+|
+├── data/                      # Folder containing stock CSVs
+|
+├── models/                    # Trained models saved here
+|
+├── screenshots/               # Screenshots for documentation
+|
+├── traditional_models.py      # ARIMA, SARIMA, Prophet functions
+|
+├── lstm_model.py              # Deep Learning LSTM logic
+|
+├── eda_outliers.py            # EDA and outlier detection functions|
+|
+├── comparison.py              # Model comparison and evaluation
+|
+├── utils.py                   # Utility functions (scaling, metrics)
+|
+├── requirements.txt           # Required Python packages
+|
+└── README.md                  # This documentation
 
+🧠 Models Explained
 
----
+Model	Type	Framework	Description
+ARIMA	Traditional	statsmodels	Works on lag, trend, and moving average
+SARIMA	Traditional	statsmodels	Extends ARIMA with seasonal factors
+Prophet	Additive Model	fbprophet	Handles seasonality, holidays, trends
+LSTM	Deep Learning	TensorFlow/Keras	Captures long-term dependencies in time series
 
-⚙️ How to Run
+📊 Evaluation Metrics Used
+Metric	Description
+RMSE	Penalizes large errors (Root Mean Squared Error)
+MAE	Mean of absolute errors
+MAPE	Percentage-based error measure
 
-1. Clone the repo:
+Each model is trained/tested on the same dataset split and compared using these metrics.
 
+📦 Installation & Running Locally
+1. Clone the Repo
+bash
+Copy
+Edit
 git clone https://github.com/kumar-ankit-100/TIME_SERIES_STOCK_FORECASTING.git
 cd TIME_SERIES_STOCK_FORECASTING
-
-
-2. Install required packages:
-
+2. Install Dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
+3. Add CSV Data
+   Dataset:
+   https://www.kaggle.com/datasets/szrlee/stock-time-series-20050101-to-20171231?utm_source=chatgpt.com
 
-Or manually install:
+4. Run the Streamlit App
+bash
+Copy
+Edit
+streamlit run app.py
+📬 Usage Notes
+✅ Handles multiple stocks: loops through all CSVs in /data folder.
 
-pip install numpy pandas matplotlib seaborn yfinance scikit-learn tensorflow
+📌 Automatically detects and preprocesses time series structure.
 
+🔁 Compares forecasts from ARIMA, SARIMA, Prophet, and LSTM.
 
-3. Run the Jupyter Notebook:
+📉 Forecast horizon and model parameters are adjustable in-app.
 
-jupyter notebook stock_forecasting.ipynb
+🤝 Contributing
+Want to improve or extend the project? Contributions are welcome!
 
+SCREENSHOTS:
 
-
-
----
-
-📷 Sample Output
-
-(Add your graphs here)
-
-
-
----
-
-👤 Author
-
-Ankit Kumar
-GitHub: @kumar-ankit-100
-
+<img width="653" alt="Screenshot 2025-06-26 180049" src="https://github.com/user-attachments/assets/37701874-10a8-4456-aec4-229b4d5818aa" />
+<img width="719" alt="Screenshot 2025-06-26 175921" src="https://github.com/user-attachments/assets/50661bf0-2ac3-4838-8ae0-047180e04f40" />
+<img width="674" alt="Screenshot 2025-06-25 175318" src="https://github.com/user-attachments/assets/07ae4f5b-f732-4503-b66d-aabf28e64296" />
 
 
----
+How to Contribute:
+Fork the repository
+
+Create your feature branch: git checkout -b my-feature
+
+Commit your changes: git commit -am 'Add new feature'
+
+Push to the branch: git push origin my-feature
+
+Create a new Pull Request
+
+ Authors:
+
+Kumar Ankit and Tanuja 
+https://github.com/kumar-ankit-100
+
+
+
+Collaborators:
+Jahnavi Battula - https://github.com/jahnavi1708
+DS Kamali - https://github.com/kamali1331
+Tanuja - https://github.com/Tanuja-1708
+Lakshya Chaudary  
+
 
 📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
-This project is open-source and available under the MIT License.
 
 
----
 
-🙌 Contributions
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
----
+
+
+
+
+
+
+
+
+
+
+
+
