@@ -115,7 +115,7 @@ Want to improve or extend the project? Contributions are welcome!
 SCREENSHOTS:
 
 <img width="653" alt="Screenshot 2025-06-26 180049" src="https://github.com/user-attachments/assets/37701874-10a8-4456-aec4-229b4d5818aa" />
-<img width="653" alt="Screenshot 2025-06-26 180049" src="https://github.com/user-attachments/assets/37701874-10a8-4456-aec4-229b4d5818aa" />
+<img width="719" alt="Screenshot 2025-06-26 175921" src="https://github.com/user-attachments/assets/50661bf0-2ac3-4838-8ae0-047180e04f40" />
 <img width="674" alt="Screenshot 2025-06-25 175318" src="https://github.com/user-attachments/assets/07ae4f5b-f732-4503-b66d-aabf28e64296" />
 
 
@@ -141,7 +141,7 @@ Collaborators:
 Jahnavi Battula - https://github.com/jahnavi1708
 DS Kamali - https://github.com/kamali1331
 Tanuja - https://github.com/Tanuja-1708
-Lakshya Chaudary - 
+Lakshya Chaudary  
 
 
 📄 License
