@@ -130,15 +130,18 @@ Push to the branch: git push origin my-feature
 
 Create a new Pull Request
 
-👨‍💻 Author
+ Authors:
 
-Kumar Ankit
+Kumar Ankit and Tanuja 
+https://github.com/kumar-ankit-100
+
+
 
 Collaborators:
-Jahnavi Battula
-DS Kamali
-Tanuja
-Lakshya Chaudary
+Jahnavi Battula - https://github.com/jahnavi1708
+DS Kamali - https://github.com/kamali1331
+Tanuja - https://github.com/Tanuja-1708
+Lakshya Chaudary - 
 
 
 📄 License
