@@ -18,6 +18,7 @@ from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import joblib
+import os
 
 print("TensorFlow Version:", tf.__version__)
 print("GPU Available:", tf.config.list_physical_devices('GPU'))
@@ -208,8 +209,8 @@ def train_and_evaluate_model(data, symbol, time_step=100):
     plt.show()
 
     # Save model and scaler with stock name
-    model_save_path = f'models/{symbol}_model.h5'
-    scaler_save_path = f'models/{symbol}_scaler.pkl'
+    model_save_path = f'lstm_models/{symbol}_model.h5'
+    scaler_save_path = f'lstm_models/{symbol}_scaler.pkl'
     model.save(model_save_path)
     joblib.dump(scaler, scaler_save_path)
     print(f"Model and scaler saved successfully for {symbol} at {model_save_path} and {scaler_save_path}")
@@ -225,29 +226,28 @@ def train_and_evaluate_model(data, symbol, time_step=100):
     print(f"Change for {symbol}: {change_percent:+.2f}%")
 
 def main():
-    # List of stock symbols (example with 5 Nifty 50 stocks)
-    stock_symbols = ['ADANIPORTS', 'BRITANNIA', 'HDFCBANK', 'ONGC', 'TATASTEEL']
-    # Update data_path for each stock or use a dictionary of file paths
-    base_data_path = '/content/drive/MyDrive/Colab Notebooks/archive/'  # Adjust as needed
+    # Dynamically load all CSV files from the Datasets directory
+    datasets_dir = 'datasets'
+    for filename in os.listdir(datasets_dir):
+        if filename.endswith('.csv'):
+            symbol = os.path.splitext(filename)[0]
+            data_path = os.path.join(datasets_dir, filename)
+            try:
+                data = load_and_preprocess_data(data_path, symbol)
+                if data is None:
+                    print(f"Skipping {symbol} due to data loading issues.")
+                    continue
 
-    for symbol in stock_symbols:
-        data_path = f'{base_data_path}{symbol.replace(".NS", "")}.csv'
-        try:
-            data = load_and_preprocess_data(data_path, symbol)
-            if data is None:
-                print(f"Skipping {symbol} due to data loading issues.")
-                continue
+                # Visualize initial data
+                visualize_data(data, symbol)
 
-            # Visualize initial data
-            visualize_data(data, symbol)
+                # Train and evaluate model
+                train_and_evaluate_model(data, symbol)
 
-            # Train and evaluate model
-            train_and_evaluate_model(data, symbol)
-
-        except Exception as e:
-            print(f"Error processing {symbol}: {e}")
-            import traceback
-            traceback.print_exc()
+            except Exception as e:
+                print(f"Error processing {symbol}: {e}")
+                import traceback
+                traceback.print_exc()
 
 if __name__ == "__main__":
     main()
