@@ -42,34 +42,44 @@ Edit
 TIME_SERIES_STOCK_FORECASTING/
 │
 ├── app.py                     # Main Streamlit application
+
 |
 ├── data/                      # Folder containing stock CSVs
+
 |
 ├── models/                    # Trained models saved here
+
 |
 ├── screenshots/               # Screenshots for documentation
+
 |
 ├── traditional_models.py      # ARIMA, SARIMA, Prophet functions
+
 |
 ├── lstm_model.py              # Deep Learning LSTM logic
+
 |
-├── eda_outliers.py            # EDA and outlier detection functions|
+├── eda_outliers.py            # EDA and outlier detection functions
+
 |
 ├── comparison.py              # Model comparison and evaluation
+
 |
 ├── utils.py                   # Utility functions (scaling, metrics)
+
 |
 ├── requirements.txt           # Required Python packages
+
 |
 └── README.md                  # This documentation
 
 🧠 Models Explained
 
-Model	Type	Framework	Description
-ARIMA	Traditional	statsmodels	Works on lag, trend, and moving average
-SARIMA	Traditional	statsmodels	Extends ARIMA with seasonal factors
-Prophet	Additive Model	fbprophet	Handles seasonality, holidays, trends
-LSTM	Deep Learning	TensorFlow/Keras	Captures long-term dependencies in time series
+Model 	Type	            Framework	    Description
+ARIMA	  Traditional	    statsmodels	     Works on lag, trend, and moving average
+SARIMA  Traditional	    statsmodels     	Extends ARIMA with seasonal factors
+Prophet Additive Model	 fbprophet	      Handles seasonality, holidays, trends
+LSTM	  Deep Learning	 TensorFlow/Keras	Captures long-term dependencies in time series
 
 📊 Evaluation Metrics Used
 Metric	Description
@@ -139,13 +149,17 @@ https://github.com/kumar-ankit-100
 
 Collaborators:
 Jahnavi Battula - https://github.com/jahnavi1708
+
 DS Kamali - https://github.com/kamali1331
+
 Tanuja - https://github.com/Tanuja-1708
+
 Lakshya Chaudary  -
 https://github.com/Lakshya191
 
 
 📄 License
+
 This project is licensed under the MIT License.
 See the LICENSE file for details.
 
