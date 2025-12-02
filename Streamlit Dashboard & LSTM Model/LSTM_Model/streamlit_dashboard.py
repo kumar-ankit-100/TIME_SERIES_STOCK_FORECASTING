@@ -291,7 +291,10 @@ stock_symbols.sort()  # Sort for consistent display
 
 # Define model and scaler file mappings
 model_mappings = {
-    symbol: (f'lstm_models/{symbol}_model.h5', f'lstm_models/{symbol}_scaler.pkl')
+    symbol: (
+        os.path.join(script_dir, 'lstm_models', f'{symbol}_model.h5'),
+        os.path.join(script_dir, 'lstm_models', f'{symbol}_scaler.pkl')
+    )
     for symbol in stock_symbols
 }
 
@@ -299,7 +302,7 @@ model_mappings = {
 @st.cache_data
 def load_stock_data(stock_symbol):
     """Load and prepare the stock dataset"""
-    file_path = os.path.join('datasets', f'{stock_symbol}.csv')
+    file_path = os.path.join(dataset_dir, f'{stock_symbol}.csv')
     if not os.path.exists(file_path):
         st.error(f"Dataset for {stock_symbol} not found at {file_path}")
         return None
