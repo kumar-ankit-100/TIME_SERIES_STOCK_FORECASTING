@@ -270,9 +270,23 @@ if 'dark_mode' not in st.session_state:
 # Apply theme
 st.markdown(get_advanced_theme_css(), unsafe_allow_html=True)
 
-# Get list of available stocks from datasets directory
-dataset_dir = 'datasets'
+# # Get list of available stocks from datasets directory
+# Get the directory where this script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+dataset_dir = os.path.join(script_dir, 'datasets')
+
+# Check if datasets directory exists, if not try alternative paths
+if not os.path.exists(dataset_dir):
+    # Try looking in the parent directory
+    dataset_dir = os.path.join(os.path.dirname(script_dir), 'datasets')
+    
+if not os.path.exists(dataset_dir):
+    st.error(f"Dataset directory not found. Please ensure 'datasets' folder exists.")
+    st.stop()
+
 stock_symbols = [os.path.splitext(f)[0] for f in os.listdir(dataset_dir) if f.endswith('.csv')]
+# dataset_dir = 'datasets'
+# stock_symbols = [os.path.splitext(f)[0] for f in os.listdir(dataset_dir) if f.endswith('.csv')]
 stock_symbols.sort()  # Sort for consistent display
 
 # Define model and scaler file mappings
